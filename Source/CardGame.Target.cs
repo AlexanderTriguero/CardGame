@@ -5,11 +5,10 @@ using System.Collections.Generic;
 
 public class CardGameTarget : TargetRules
 {
-	public CardGameTarget(TargetInfo Target) : base(Target)
+    public CardGameTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-		DefaultBuildSettings = BuildSettingsVersion.V4;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3;
+		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.Add("CardGame");
 	}
 }
