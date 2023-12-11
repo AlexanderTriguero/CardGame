@@ -1,30 +1,27 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Cards/Actors/A_Card.h"
+#include "A_BattleField.h"
 
 // Sets default values
-AA_Card::AA_Card()
+AA_BattleField::AA_BattleField()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
 
 }
 
 // Called when the game starts or when spawned
-void AA_Card::BeginPlay()
+void AA_BattleField::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
-ECardType AA_Card::GetCardType()
+// Called every frame
+void AA_BattleField::Tick(float DeltaTime)
 {
-	return CardType;
-}
+	Super::Tick(DeltaTime);
 
-bool AA_Card::ActivateAgaints(AA_Card OtherCard)
-{
-	return WinningTypes[(int8)OtherCard.GetCardType()];
 }
 
