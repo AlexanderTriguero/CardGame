@@ -1,10 +1,8 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "A_Card.generated.h"
+#include "CG_Card.generated.h"
 
 UENUM()
 enum class ECardType: uint8
@@ -18,13 +16,13 @@ enum class ECardType: uint8
 
 
 UCLASS()
-class CARDGAME_API AA_Card : public AActor
+class CARDGAME_API ACG_Card : public AActor
 {
 	GENERATED_BODY()	
 
 public:	
 	// Sets default values for this actor's properties
-	AA_Card();
+	ACG_Card();
 
 	UFUNCTION()
 	ECardType GetCardType();
@@ -41,7 +39,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	bool ActivateAgaints(AA_Card OtherCard);
+	bool ActivateAgaints(ACG_Card OtherCard);
 
 
 	

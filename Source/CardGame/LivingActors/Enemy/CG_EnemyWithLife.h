@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LivingActors/A_ActorWithLife.h"
-#include "A_EnemyWIthLife.generated.h"
+#include "LivingActors/CG_ActorWithLife.h"
+#include "CG_EnemyWithLife.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class CARDGAME_API AA_EnemyWIthLife : public AA_ActorWithLife
+class CARDGAME_API ACG_EnemyWithLife : public ACG_ActorWithLife
 {
 	GENERATED_BODY()
 	

@@ -4,22 +4,20 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "A_BattleField.generated.h"
+#include "CG_ActorWithLife.generated.h"
 
 UCLASS()
-class CARDGAME_API AA_BattleField : public AActor
+class CARDGAME_API ACG_ActorWithLife : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AA_BattleField();
+	ACG_ActorWithLife();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-
 
 public:	
 	// Called every frame

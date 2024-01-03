@@ -1,27 +1,30 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "LivingActors/A_ActorWithLife.h"
+#include "Cards/Actors/CG_Card.h"
 
 // Sets default values
-AA_ActorWithLife::AA_ActorWithLife()
+ACG_Card::ACG_Card()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 }
 
 // Called when the game starts or when spawned
-void AA_ActorWithLife::BeginPlay()
+void ACG_Card::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
-// Called every frame
-void AA_ActorWithLife::Tick(float DeltaTime)
+ECardType ACG_Card::GetCardType()
 {
-	Super::Tick(DeltaTime);
+	return CardType;
+}
 
+bool ACG_Card::ActivateAgaints(ACG_Card OtherCard)
+{
+	return WinningTypes[(int8)OtherCard.GetCardType()];
 }
 
